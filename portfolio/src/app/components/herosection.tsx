@@ -35,7 +35,7 @@ const HeroSection = () => {
                             </button>
                         </Link>
 
-                        <a href="/assets/downloads/Resume.pdf" download="AnishThapaMagar-Resume.pdf">
+                        <a href="/assets/downloads/AnishThapaMagar-Resume.pdf" download="AnishThapaMagar-Resume.pdf">
                             <button className='p-1 w-1/3 text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
                                 <span className='p-3 block rounded-full bg-black hover:bg-slate-200 hover:text-black'>
                                     Download CV
