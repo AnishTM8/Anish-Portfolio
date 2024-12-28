@@ -11,11 +11,11 @@ const HeroSection = () => {
                 <div className='m-10 px-10 col-span-8'>
                     <div className='text-6xl font-extrabold mt-10'>
                         Hi, I&apos;m {""}
-                        <p className='mt-5 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-emerald-500'>
+                        <p className='mt-5 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-emerald-500'>
                             Anish Thapa Magar
                         </p>
                     </div>
-                    <p className='text-4xl font-semibold mt-5'>
+                    <p className='text-4xl font-semibold mt-4'>
                         <ReactTyped
                             strings={[
                                 "A Web Developer",
