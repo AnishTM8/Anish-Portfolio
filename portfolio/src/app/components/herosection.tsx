@@ -1,13 +1,13 @@
 "use client";
 
 import Image from 'next/image';
-import { ReactTyped } from 'react-typed';
+import {ReactTyped} from 'react-typed';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const HeroSection = () => {
     return (
-        <section className='z-[-1]'>
+        <section >
             <div className='grid grid-cols-12'>
                 <div className='m-10 px-10 col-span-8'>
                     <div className='text-6xl font-extrabold mt-10'>
@@ -68,7 +68,7 @@ const HeroSection = () => {
                             transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
                         />
                     </motion.svg>
-                    <div className='m-6 rounded-full'>
+                    <div className='m-6 rounded-full z-[-1]'>
                         <Image src='/images/Me.jpg' alt='My Image' width={500} height={500} className='rounded-full' />
                     </div>
                 </div>
