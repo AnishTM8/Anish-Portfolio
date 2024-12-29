@@ -3,10 +3,11 @@
 import Image from 'next/image';
 import { ReactTyped } from 'react-typed';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const HeroSection = () => {
     return (
-        <section>
+        <section className='z-[-1]'>
             <div className='grid grid-cols-12'>
                 <div className='m-10 px-10 col-span-8'>
                     <div className='text-6xl font-extrabold mt-10'>
@@ -45,13 +46,32 @@ const HeroSection = () => {
 
                     </div>
                 </div>
-                <div className='col-span-4'>
-                    <div className='m-10 rounded-full'>
-                        <br />
+                <div className='col-span-4 relative flex justify-center items-center'>
+                    <motion.svg
+                        className='absolute w-[500px] h-[500px] m-4'
+                        fill="transparent"
+                        viewBox="0 0 506 506"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <motion.circle
+                            cx="253"
+                            cy="253"
+                            r="250"
+                            stroke="#0D9488"
+                            strokeWidth="4"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            initial={{ strokeDasharray: "24 10 0 0" }}
+                            animate={{
+                                strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+                                rotate: [120, 360]
+                            }}
+                            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
+                        />
+                    </motion.svg>
+                    <div className='m-6 rounded-full'>
                         <Image src='/images/Me.jpg' alt='My Image' width={500} height={500} className='rounded-full' />
                     </div>
                 </div>
-
             </div>
         </section>
     );
