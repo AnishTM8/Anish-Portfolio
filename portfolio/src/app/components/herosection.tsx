@@ -46,7 +46,7 @@ const HeroSection = () => {
 
                     </div>
                 </div>
-                <div className='col-span-4 relative flex justify-center items-center z-[-1]'>
+                <div className='mt-10 mr-5 col-span-4 relative flex justify-center items-center z-[-1]'>
                     <motion.svg
                         className='absolute w-[500px] h-[500px] m-4'
                         fill="transparent"
