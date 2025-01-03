@@ -8,15 +8,15 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
     return (
         <section >
-            <div className='grid grid-cols-12'>
-                <div className='m-10 px-10 col-span-8'>
-                    <div className='text-6xl md:text-6xl sm:text-3xl font-extrabold mt-10'>
+            <div className='grid grid-cols-2 md:grid-clos-8 lg:grid-cols-12'>
+                <div className='m-10 px-10 col-span-5 md:col-span-8'>
+                    <div className='text-6xl font-extrabold mt-10'>
                         Hi, I&apos;m {""}
                         <p className='mt-5 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-emerald-500'>
                             Anish Thapa Magar
                         </p>
                     </div>
-                    <p className='text-4xl md:text-4xl sm:text-xl font-semibold mt-4'>
+                    <p className='text-4xl font-semibold mt-4'>
                         <ReactTyped
                             strings={[
                                 "A Web Developer",
@@ -46,7 +46,7 @@ const HeroSection = () => {
 
                     </div>
                 </div>
-                <div className='mt-10 mr-5 col-span-4 relative flex justify-center items-center z-[-1]'>
+                <div className='mt-10 mr-5 col-span-3 md:col-span-4 relative flex justify-center items-center z-[-1]'>
                     <motion.svg
                         className='absolute w-[500px] h-[500px] m-4'
                         fill="transparent"
