@@ -47,7 +47,7 @@ export function HeaderProvider({ children }: HeaderProviderProps) {
             };
 
             if (pathname === '/hire-me') {
-                setHeader('Hire Me!');
+                setHeader('Hire Me');
             };
         };
 
