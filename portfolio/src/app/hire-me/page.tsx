@@ -1,5 +1,5 @@
 'use client';
-import { useState} from "react";
+import { useState, useRef} from "react";
 import emailjs from "@emailjs/browser";
 
 const HireMe = () => {
@@ -9,29 +9,29 @@ const HireMe = () => {
     const [email, setEmail] = useState<string>('');
     const [message, setMessage] = useState<string>('');
 
+    const form = useRef<HTMLFormElement>(null);
+
     const handleSend = (event: React.FormEvent) => {
         event.preventDefault();
-        console.log("Sent");
-
-        //emailJS
-        const serviceID = 'service_0x48ltk';
-        const templateID = 'template_yzfiwuk';
-        const publicKey = 'FwhvOtmX5cQ8YOJuN';
-
-        const templateParams = {
-            from_name:name,
-            from_email:email,
-            from_number:number,
-            message:message,
-            to_name:'Anish Thapa Magar',
-        };
-
-        alert('Message Sent!');
         
-        emailjs.send(serviceID, templateID, templateParams, publicKey)
+        if (form.current && form.current.checkValidity()){
+            //emailJS
+            const serviceID = 'service_0x48ltk';
+            const templateID = 'template_yzfiwuk';
+            const publicKey = 'FwhvOtmX5cQ8YOJuN';
+            
+            const templateParams = {
+                from_name:name,
+                from_email:email,
+                from_number:number,
+                message:message,
+                to_name:'Anish Thapa Magar',
+            };
+            
+            emailjs.send(serviceID, templateID, templateParams, publicKey)
             .then(
                 () => {
-                    console.log('SUCCESS!');
+                    alert('Message Sent!');
                     setName('');
                     setNumber('');
                     setEmail('');
@@ -42,13 +42,19 @@ const HireMe = () => {
                     alert('Failed!');
                 },
             );
+        }
+        else {
+            if(form.current){
+                form.current.reportValidity();
+            };
         };
 
-
-    return (
+    };
+        
+        return (
         <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-16'>
             <div className="mt-5 md:mt-20 flex flex-col lg:flex-row bg-slate-600 p-10 bg-opacity-25 rounded-xl self-start">
-                <form className="grid grid-cols-1 gap-5 mx-auto text-white">
+                <form ref={form} className="grid grid-cols-1 gap-5 mx-auto text-white">
                     <h1 className="text-4xl text-green-400">
                         Contact Me
                     </h1>
