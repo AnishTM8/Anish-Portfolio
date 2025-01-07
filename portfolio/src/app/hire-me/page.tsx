@@ -1,5 +1,50 @@
+'use client';
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const HireMe = () => {
+
+    const [name, setName] = useState<string>('');
+    const [number, setNumber] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
+
+    const handleSend = (event: React.FormEvent) => {
+        event.preventDefault();
+        console.log("Sent");
+
+        //emailJS
+        const serviceID = 'service_0x48ltk';
+        const templateID = 'template_yzfiwuk';
+        const publicKey = 'FwhvOtmX5cQ8YOJuN';
+
+        const templateParams = {
+            from_name:name,
+            from_email:email,
+            from_number:number,
+            message:message,
+            to_name:'Anish Thapa Magar',
+        };
+
+        alert('Message Sent!');
+        
+        emailjs.send(serviceID, templateID, templateParams, publicKey)
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                    setName('');
+                    setNumber('');
+                    setEmail('');
+                    setMessage('');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                    alert('Failed!');
+                },
+            );
+        };
+
+
     return (
         <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-16'>
             <div className="mt-5 md:mt-20 flex flex-col lg:flex-row bg-slate-600 p-10 bg-opacity-25 rounded-xl self-start">
@@ -10,11 +55,31 @@ const HireMe = () => {
                     <p className="text-white text-lg">
                         Are you interested in hiring me or want to say hi? You can send me a message.
                     </p>
-                    <input type="text" placeholder="Your Full Name" className="h-11 rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 outline-none" />
-                    <input type="tel" placeholder="Your Phone Number" className="h-11 rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 outline-none" />
-                    <input type="email" placeholder="Your E-mail Address" className="h-11 rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 outline-none" />
-                    <textarea placeholder="Write your message here..." className="h-[175px] rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 outline-none" />
-                    <button type="submit" className="p-1 w-1/3 text-white text-xl rounded-full bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500
+                    <input required
+                        type="text"
+                        placeholder="Your Full Name"
+                        value={name} onChange={(event) => setName(event.target.value)}
+                        className="text-lg h-11 text-black rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 focus:text-current outline-none" />
+
+                    <input type="tel"
+                        placeholder="Your Phone Number"
+                        value={number} onChange={(event) => setNumber(event.target.value)}
+                        className="text-lg h-11 rounded-lg p-3 text-black bg-white border-2 focus:bg-gray-800 focus:border-green-500 focus:text-current outline-none" />
+
+                    <input required
+                        type="email"
+                        placeholder="Your E-mail Address"
+                        value={email} onChange={(event) => setEmail(event.target.value)}
+                        className="text-lg h-11 text-black rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 focus:text-current outline-none" />
+
+                    <textarea required
+                        placeholder="Write your message here..."
+                        value={message} onChange={(event) => setMessage(event.target.value)}
+                        className="text-lg h-[175px] text-black rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 focus:text-current outline-none" />
+
+                    <button type="submit"
+                        onClick={handleSend}
+                        className="text-lg p-1 w-1/3 text-white rounded-full bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500
                             ">
                         <span className="p-2 block rounded-full hover:text-black hover:bg-slate-200">
                             Send
