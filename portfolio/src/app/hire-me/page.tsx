@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef } from "react";
+import { useState} from "react";
 import emailjs from "@emailjs/browser";
 
 const HireMe = () => {
