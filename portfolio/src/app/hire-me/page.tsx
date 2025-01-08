@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef} from "react";
+import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const HireMe = () => {
@@ -13,45 +13,47 @@ const HireMe = () => {
 
     const handleSend = (event: React.FormEvent) => {
         event.preventDefault();
-        
-        if (form.current && form.current.checkValidity()){
+
+        if (form.current && form.current.checkValidity()) {
             //emailJS
             const serviceID = 'service_0x48ltk';
             const templateID = 'template_yzfiwuk';
             const publicKey = 'FwhvOtmX5cQ8YOJuN';
-            
+
             const templateParams = {
-                from_name:name,
-                from_email:email,
-                from_number:number,
-                message:message,
-                to_name:'Anish Thapa Magar',
+                from_name: name,
+                from_email: email,
+                from_number: number,
+                message: message,
+                to_name: 'Anish Thapa Magar',
             };
-            
+
+            //send email to me and user
             emailjs.send(serviceID, templateID, templateParams, publicKey)
-            .then(
-                () => {
-                    alert('Message Sent!');
-                    setName('');
-                    setNumber('');
-                    setEmail('');
-                    setMessage('');
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                    alert('Failed!');
-                },
-            );
+                .then(
+                    () => {
+                        alert('Message Sent!');
+                        setName('');
+                        setNumber('');
+                        setEmail('');
+                        setMessage('');
+
+                    },
+                    (error) => {
+                        console.log('FAILED...', error.text);
+                        alert('Failed!');
+                    },
+                );
         }
         else {
-            if(form.current){
+            if (form.current) {
                 form.current.reportValidity();
             };
         };
 
     };
-        
-        return (
+
+    return (
         <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-16'>
             <div className="mt-5 md:mt-20 flex flex-col lg:flex-row bg-slate-600 p-10 bg-opacity-25 rounded-xl self-start">
                 <form ref={form} className="grid grid-cols-1 gap-5 mx-auto text-white">
@@ -68,7 +70,7 @@ const HireMe = () => {
                         className="text-lg h-11 text-black rounded-lg p-3 bg-white border-2 focus:bg-gray-800 focus:border-green-500 focus:text-current outline-none" />
 
                     <input type="tel"
-                        placeholder="Your Phone Number"
+                        placeholder="Your Phone Number (Optional)"
                         value={number} onChange={(event) => setNumber(event.target.value)}
                         className="text-lg h-11 rounded-lg p-3 text-black bg-white border-2 focus:bg-gray-800 focus:border-green-500 focus:text-current outline-none" />
 
