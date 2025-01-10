@@ -14,20 +14,27 @@ const Experiences = () => {
 
                 return (
                     <div key={content.id} className="flex m-4 relative">
+                        {/* lines connecting the cards to cards */}
                         <div className={`bg-gradient-to-b from-green-400 via-teal-400 to-emerald-400 w-1 h-6 translate-x-20 -translate-y-7 sm:hidden opacity-60`}></div>
                         <div className={`bg-gradient-to-b from-green-400 via-teal-400 to-emerald-400 w-1 h-6 translate-x-[calc(100vw-7rem)] -translate-y-7 sm:hidden opacity-60`}></div>
+                        
                         <div className="hidden items-start w-50 pt-0.5 relative sm:flex">
                             <div className="w-16 text-center">
                                 {content.startDate}
                             </div>
-                            <div className={`bg-gradient-to-b from-green-400 via-teal-400 to-emerald-400 w-2 h-full translate-x-7 translate-y-8`}></div>
+
+                            {/* line connecting icons to icons */}
+                            <div className={`bg-gradient-to-b from-green-400 via-teal-400 to-emerald-400 w-1 h-full translate-x-7 translate-y-8`}></div>
                             <Image src={content.icon === "work" ? workIcon : educationIcon} alt='School/Job Icon'
                                 className={`${color} w-12 rounded-xl p-1 z-20`} />
+
+                            {/* line connecting icons and cards */}
                             <div className={`bg-gradient-to-b from-green-400 via-teal-500 to-emerald-500 w-8 h-1 translate-y-6`}></div>
                         </div>
 
                         {/* creating div for other contents */}
                         <div className="border-2 border-green-600 rounded-xl px-8 py-4 bg-slate-500 bg-opacity-25 w-full text-center sm:w-[520px] z-10">
+                            
                             <div className="text-2xl mb-3 font-semibold">{content.title}</div>
                             <div className="text-xl m-1 flex items-center justify-center">
                             <svg className="w-5 h-5 fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
