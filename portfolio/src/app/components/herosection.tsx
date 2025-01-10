@@ -24,6 +24,8 @@ const HeroSection = () => {
                                 "A UI/UX Enthusiast"
                             ]}
                             loop={true}
+                            typeSpeed={30}
+                            backSpeed={30}
                             backDelay={1500}
                         />
                     </p>

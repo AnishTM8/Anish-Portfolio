@@ -96,7 +96,7 @@ const HireMe = () => {
                 </form>
             </div>
 
-            <div className="mt-5 md:mt-20 flex flex-col lg:flex-row  bg-slate-500 p-10 bg-opacity-25 rounded-xl self-start">
+            <div className="mt-5 md:mt-20 flex flex-col lg:flex-row  bg-slate-500 bg-opacity-25 p-10 rounded-xl self-start">
                 <div className="grid grid-cols-1 gap-5 mx-auto">
                     <h1 className="text-4xl text-emerald-400">
                         Let&apos;s Connect
