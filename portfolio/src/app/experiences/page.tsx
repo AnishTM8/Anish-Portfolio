@@ -18,9 +18,10 @@ const Experiences: React.FC = () => {
                         {/* lines connecting the cards to cards */}
                         <div className={`bg-gradient-to-b from-green-400 via-teal-400 to-emerald-400 w-1 h-6 translate-x-20 -translate-y-7 sm:hidden opacity-60`}></div>
                         <div className={`bg-gradient-to-b from-green-400 via-teal-400 to-emerald-400 w-1 h-6 translate-x-[calc(100vw-7rem)] -translate-y-7 sm:hidden opacity-60`}></div>
-                        
+
                         <div className="hidden items-start w-50 pt-0.5 relative sm:flex">
-                            <div className="w-16 text-center">
+                            {/* start date */}
+                            <div className="w-16 text-center mr-5">
                                 {content.startDate}
                             </div>
 
@@ -35,12 +36,12 @@ const Experiences: React.FC = () => {
 
                         {/* creating div for other contents */}
                         <div className="border-2 border-green-600 rounded-xl px-8 py-4 bg-slate-500 bg-opacity-25 w-full text-center sm:w-[520px] z-10">
-                            
+
                             <div className="text-2xl mb-3 font-semibold">{content.title}</div>
                             <div className="text-xl m-1 flex items-center justify-center">
-                            <svg className="w-5 h-5 fill-current sm:mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/>
-                            </svg>
+                                <svg className="w-5 h-5 fill-current sm:mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                    <path d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z" />
+                                </svg>
                                 {content.company}
                             </div>
                             <div className="mb-6 m-1 sm:mb-4 flex items-center justify-center italic">
@@ -48,7 +49,7 @@ const Experiences: React.FC = () => {
                                 </svg>
                                 {content.location}
                             </div>
-                                <span className="sm:hidden">Start: {content.startDate}</span>
+                            <span className="sm:hidden  underline text-emerald-600 font-semibold">Start: {content.startDate}</span>
                             <div className="mx-2 my-4 text-left">{content.description}</div>
                             <div className="flex flex-wrap justify-center mb-5">
                                 {content.tech.map((tech, index) => {
