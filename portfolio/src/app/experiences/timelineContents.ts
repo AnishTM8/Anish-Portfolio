@@ -1,4 +1,17 @@
-const timelineContents = [
+export interface TimelineContent {
+    id: number;
+    title: string;
+    location: string;
+    description: string;
+    company: string;
+    startDate: string;
+    endDate?: string;
+    icon: string;
+    color: string;
+    tech: string[];
+}
+
+const timelineContents: TimelineContent[] = [
     {
         id: 8,
         title: "It Intern ",
@@ -40,10 +53,10 @@ const timelineContents = [
         title: "Computer Science Research Assistant",
         location: "Newark, New Jersey",
         description: "Designed and tested a touch-based mobile app IDE, improving usability and collaborating with teams to implement user-centric interfaces.",
-        company: "CogAI Lab - Caldwell University",
+        company: "CogAI Lab",
         startDate: "August 2023",      
         icon: "work",
-        color: "teal",
+        color: "green",
         tech: ["UI/UX Design", "Usability Testing", "Mobile App Development", "User Research", "Collaboration", "Problem-Solving"],
         endDate: "May | 2024"
     },
@@ -55,7 +68,7 @@ const timelineContents = [
         company: "Caldwell University",
         startDate: "August 2022",
         icon: "work",
-        color: "green",
+        color: "emerald",
         tech: ["Customer Service", "Communication", "Problem-Solving", "Time Management", "Organization"],
         endDate: "May | 2025"
     },
@@ -67,7 +80,7 @@ const timelineContents = [
         company: "Caldwell University",
         startDate: "August 2021",
         icon: "education",
-        color: "green",
+        color: "teal",
         tech: ["JAVA", "Python", "Node.JS", "JavaScript","React.JS", "Express.JS", "NeDB", "SQL", "HTML", "CSS", "Tailwind CSS", "Figma", "Git", "GitHub", "MS-Office", "Full Stack Web Development", "Data Structures", "AI", "UI/UX", "Software Development", "OOP", "RESTful API"],
         endDate: "May | 2025"
     },
@@ -79,9 +92,8 @@ const timelineContents = [
         company: "Capital High School",
         startDate: "June 2019",
         icon: "education",
-        color: "teal",
+        color: "green",
         tech: ["HTML", "CSS", "MS-Office", "Calculus II"],
-       
     },
     {
         id: 1,
@@ -91,11 +103,10 @@ const timelineContents = [
         company: "Capital High School",
         startDate: "July 2017",
         icon: "education",
-        color: "teal",
+        color: "emerald",
         tech: ["QBASIC", "MS-OFFICE", "Calculus", "Algorithms"],
         endDate: "June | 2019"
     },
-
 ];
 
 export default timelineContents;

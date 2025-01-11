@@ -1,13 +1,14 @@
 import timelineContents from "./timelineContents";
+import { TimelineContent } from "./timelineContents";
 import Image from "next/image";
 import workIcon from "/public/assets/work.svg";
 import educationIcon from "/public/assets/education.svg";
 
-const Experiences = () => {
+const Experiences: React.FC = () => {
     return (
         <div className="flex flex-col justify-center items-center  sm:text-lg font-base">
             {/* mapping every item from the timeline contents */}
-            {timelineContents.map((content) => {
+            {timelineContents.map((content: TimelineContent) => {
 
                 // color of icons based on the content color specified in the timelineContents
                 const color = content.color === "green" ? "bg-green-600" : content.color === "teal" ? "bg-teal-600" : "bg-emerald-600";
@@ -37,7 +38,7 @@ const Experiences = () => {
                             
                             <div className="text-2xl mb-3 font-semibold">{content.title}</div>
                             <div className="text-xl m-1 flex items-center justify-center">
-                            <svg className="w-5 h-5 fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <svg className="w-5 h-5 fill-current sm:mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                             <path d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/>
                             </svg>
                                 {content.company}
@@ -46,8 +47,8 @@ const Experiences = () => {
                                 <svg className="w-5 h-5 fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
                                 </svg>
                                 {content.location}
-                                <span className="sm:hidden"> <br />{content.startDate}</span>
                             </div>
+                                <span className="sm:hidden">Start: {content.startDate}</span>
                             <div className="mx-2 my-4 text-left">{content.description}</div>
                             <div className="flex flex-wrap justify-center mb-5">
                                 {content.tech.map((tech, index) => {
