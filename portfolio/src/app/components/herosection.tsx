@@ -8,9 +8,9 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
     return (
         <section >
-            <div className='grid grid-cols-2 md:grid-clos-8 lg:grid-cols-12'>
-                <div className='m-10 px-10 col-span-5 md:col-span-8'>
-                    <div className='text-6xl font-extrabold mt-10'>
+            <div className='grid grid-cols-1 md:grid-clos-8 lg:grid-cols-12 max-sm:text-center'>
+                <div className='px-4 sm:m-10 sm:px-10 md:col-span-8'>
+                    <div className='text-6xl font-extrabold sm:mt-10'>
                         Hi, I&apos;m {""}
                         <p className='mt-5 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-emerald-500'>
                             Anish Thapa Magar
@@ -29,18 +29,18 @@ const HeroSection = () => {
                             backDelay={1500}
                         />
                     </p>
-                    <div className='mt-6'>
+                    <div className='mt-6 '>
                         <Link href={"/hire-me"} passHref>
-                            <button className='mr-6 p-1 w-1/3 text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
-                                <span className='p-3 block rounded-full bg-transparent hover:bg-slate-200 hover:text-black'>
+                            <button className='sm:mr-6 p-1 w-full sm:w-fit sm:px-1 text-3xl sm:text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
+                                <span className='p-3 sm:px-5 block rounded-full bg-transparent hover:bg-slate-200 hover:text-black'>
                                     Hire Me
                                 </span>
                             </button>
                         </Link>
-
+                        
                         <a href="/assets/downloads/AnishThapaMagar-Resume.pdf" download="AnishThapaMagar-Resume.pdf">
-                            <button className='p-1 w-1/3 text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
-                                <span className='p-3 block rounded-full bg-black hover:bg-slate-200 hover:text-black'>
+                            <button className='p-1 w-full mt-2 sm:w-fit sm:px-1 text-3xl sm:text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
+                                <span className='p-3 block sm:px-5 rounded-full bg-black hover:bg-slate-200 hover:text-black'>
                                     Download CV
                                 </span>
                             </button>
@@ -48,9 +48,9 @@ const HeroSection = () => {
 
                     </div>
                 </div>
-                <div className='mt-10 mr-5 col-span-3 md:col-span-4 relative flex justify-center items-center z-[-1]'>
+                <div className='sm:mt-10 sm:mr-5 col-span-3 md:col-span-4 relative flex justify-center items-center z-[-1]'>
                     <motion.svg
-                        className='absolute w-[500px] h-[500px] m-4'
+                        className='absolute sm:w-[500px] sm:h-[500px] lg:w-[520px] lg:h-[520px]  m-4'
                         fill="transparent"
                         viewBox="0 0 506 506"
                         xmlns="http://www.w3.org/2000/svg">
