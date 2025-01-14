@@ -6,7 +6,8 @@ import educationIcon from "/public/assets/education.svg";
 
 const Experiences: React.FC = () => {
     return (
-        <div className="flex flex-col justify-center items-center  sm:text-lg font-base">
+        
+        <div className="flex flex-col justify-center items-center sm:text-lg font-base">
             {/* mapping every item from the timeline contents */}
             {timelineContents.map((content: TimelineContent) => {
 

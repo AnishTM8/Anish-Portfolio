@@ -55,7 +55,7 @@ const HireMe = () => {
 
     return (
         <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-16'>
-            <div className="mt-5 md:mt-20 flex flex-col lg:flex-row bg-slate-600 p-10 bg-opacity-25 rounded-3xl self-start">
+            <div className="mt-[5rem] sm:mt-5 md:mt-20 flex flex-col lg:flex-row bg-slate-600 p-10 bg-opacity-25 rounded-3xl self-start">
                 <form ref={form} className="grid grid-cols-1 gap-5 mx-auto text-white">
                     <h1 className="text-4xl text-green-400">
                         Contact Me
