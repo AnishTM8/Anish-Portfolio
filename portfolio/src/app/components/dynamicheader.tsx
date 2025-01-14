@@ -72,7 +72,8 @@ const Header = () => {
     };
 
     return (
-        <motion.div key={context.header} className="p-6 font-semibold text-4xl" initial={{x: -100}} animate={{x: 0}} transition={{duration:0.4}} >
+        // Header for screens larger than sm
+        <motion.div key={context.header} className="max-sm:hidden p-6 font-semibold text-4xl" initial={{x: -100}} animate={{x: 0}} transition={{duration:0.4}} >
             {context.header} 
         </motion.div>
     );

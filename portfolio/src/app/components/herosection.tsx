@@ -8,15 +8,17 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
     return (
         <section >
-            <div className='grid grid-cols-1 md:grid-clos-8 lg:grid-cols-12 max-sm:text-center'>
+            <div className='p-4 sm:p-0 grid grid-cols-1 md:grid-clos-8 lg:grid-cols-12 max-sm:text-center'>
                 <div className='px-4 sm:m-10 sm:px-10 md:col-span-8'>
                     <div className='text-6xl font-extrabold sm:mt-10'>
+                        {/* Main Text */}
                         Hi, I&apos;m {""}
                         <p className='mt-5 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-teal-500 to-emerald-500'>
                             Anish Thapa Magar
                         </p>
                     </div>
                     <p className='text-4xl font-semibold mt-4'>
+                        {/* Typing Animation */}
                         <ReactTyped
                             strings={[
                                 "A Web Developer",
@@ -29,6 +31,8 @@ const HeroSection = () => {
                             backDelay={1500}
                         />
                     </p>
+
+                    {/* Buttons */}
                     <div className='mt-6 '>
                         <Link href={"/hire-me"} passHref>
                             <button className='sm:mr-6 p-1 w-full sm:w-fit sm:px-1 text-3xl sm:text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
@@ -48,7 +52,8 @@ const HeroSection = () => {
 
                     </div>
                 </div>
-                <div className='sm:mt-10 sm:mr-5 col-span-3 md:col-span-4 relative flex justify-center items-center z-[-1]'>
+                <div className='sm:mt-10 sm:mr-5 col-span-3 md:col-span-4 relative flex justify-center items-center z-[-1] max-sm:order-first'>
+                    {/* Dotted Circle */}
                     <motion.svg
                         className='absolute sm:w-[500px] sm:h-[500px] lg:w-[520px] lg:h-[520px]  m-4'
                         fill="transparent"

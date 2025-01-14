@@ -17,7 +17,7 @@ const Navbar = () => {
     const setHeader = context.setHeader;
 
     return (
-        <nav className="pb-5 rounded-xl backdrop-blur-3xl flex justify-end fixed top-0 right-0 z-50">
+        <nav className="max-sm:hidden pb-5 rounded-xl backdrop-blur-3xl flex justify-end fixed top-0 right-0 z-50">
 
             <ul className="pt-5 pr-7 pl-7 hover:scale-110">
                 <Link href="/" onClick={() => setHeader('Home')}>
