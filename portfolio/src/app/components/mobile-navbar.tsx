@@ -31,7 +31,7 @@ const MobileNavbar = () => {
             </div>
 
             {/* Ternary operator to check if the nav bar is open or closed */}
-            <nav className={`${isOpen ? 'block' : 'hidden'} backdrop-blur-2xl w-fit h-fit px-8 py-6 rounded-2xl fixed bottom-[3.5rem] right-0 m-4`} >
+            <div className={`${isOpen ? 'block' : 'hidden'} border-2 border-emerald-600 bg-black/30 backdrop-blur-3xl w-fit h-fit px-8 py-6 rounded-2xl fixed bottom-[3.5rem] right-0 m-4`} >
 
                 <ul className=" hover:text-emerald-500 ">
                     <Link href="/" onClick={toggleMenu} className="flex items-center">
@@ -89,7 +89,7 @@ const MobileNavbar = () => {
                     </Link>
                 </ul>
 
-            </nav>
+            </div>
 
         </div>
     );

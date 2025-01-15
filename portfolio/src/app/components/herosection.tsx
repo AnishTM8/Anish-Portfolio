@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const HeroSection = () => {
     return (
         <section >
-            <div className='p-4 sm:p-0 grid grid-cols-1 md:grid-clos-8 lg:grid-cols-12 max-sm:text-center'>
+            <div className='px-4 sm:p-0 grid grid-cols-1 md:grid-clos-8 lg:grid-cols-12 max-sm:text-center'>
                 <div className='px-4 sm:m-10 sm:px-10 md:col-span-8'>
                     <div className='text-6xl font-extrabold sm:mt-10'>
                         {/* Main Text */}
