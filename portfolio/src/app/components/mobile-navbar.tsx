@@ -15,23 +15,23 @@ const MobileNavbar = () => {
 
     return (
         <div className="fixed sm:hidden text-2xl font-semibold flex flex-col-2 z-50 ">
-            <div className="fixed flex flex-col-2 m-4">
+            <div className="fixed flex flex-col-2 m-4 bottom-0 right-0 ">
                 {/* menu icon */}
-                <button onClick={toggleMenu} className={`${isOpen ? 'hidden' : 'block'} backdrop-blur-lg rounded-xl p-1`}>
-                    <svg className="w-12 h-12 text-emerald-500" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <button onClick={toggleMenu} className={`${isOpen ? 'hidden' : 'block'} bg-emerald-600 rounded-xl p-1`}>
+                    <svg className="w-12 h-11 " stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                {/* closing icon */}
+                <button onClick={toggleMenu} className={`${isOpen ? 'block' : 'hidden'} bg-rose-600 rounded-xl p-1`}>
+                    <svg className="w-12 h-11" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
 
             {/* Ternary operator to check if the nav bar is open or closed */}
-            <nav className={`${isOpen ? 'block' : 'hidden'} backdrop-blur-2xl w-full h-screen px-12 py-24 rounded-e-3xl`} >
-                {/* closing icon */}
-                <button onClick={toggleMenu} className="absolute top-0 right-0 m-4">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
+            <nav className={`${isOpen ? 'block' : 'hidden'} backdrop-blur-2xl w-fit h-fit px-8 py-6 rounded-2xl fixed bottom-[3.5rem] right-0 m-4`} >
 
                 <ul className=" hover:text-emerald-500 ">
                     <Link href="/" onClick={toggleMenu} className="flex items-center">
