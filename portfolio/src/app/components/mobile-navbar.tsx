@@ -31,15 +31,15 @@ const MobileNavbar = () => {
                 </button>
             </div>
 
-            {/* Ternary operator to check if the nav bar is open or closed */}
             <AnimatePresence>
 
+                {/* To check if the nav bar is open*/}
                 {isOpen && (
                     <motion.div
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        exit={{ scale: 0, opacity: 0 }}
-                        transition={{ duration: 0.5, type: 'spring' }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0, opacity: 0 }}
+                    transition={{ duration: 0.5, type: 'spring' }}
                         className="border-2 border-emerald-600 bg-black/30 backdrop-blur-3xl w-fit h-fit px-8 py-6 rounded-2xl fixed bottom-[3.5rem] right-0 m-4 origin-bottom-right"
                     >
                         <ul className="hover:text-emerald-500">
