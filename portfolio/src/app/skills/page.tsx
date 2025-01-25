@@ -1,8 +1,4 @@
-import nextIcon from '/public/assets/nextjs.svg';
-import expressIcon from '/public/assets/express.svg';
-import tensorflowIcon from '/public/assets/tensorflow.svg';
-import postmanIcon from '/public/assets/postman.svg';
-import Image from 'next/image';
+
 const Skills = () => {
     return (
 
