@@ -6,7 +6,7 @@ const Skills = () => {
             {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
 
             {/* Languages */}
-            <div className="sm:mt-10 px-16">
+            <div className="sm:mt-10  px-4 sm:px-16">
                 <p className="ml-2 text-3xl font-bold">
                     Languages
                 </p>
@@ -68,7 +68,7 @@ const Skills = () => {
             </div>
 
             {/* Tools & Frameworks */}
-            <div className="mt-10 px-16">
+            <div className="mt-5 sm:mt-10 px-4 sm:px-16">
                 <p className="ml-2 text-3xl font-bold">
                     Tools & Frameworks
                 </p>
