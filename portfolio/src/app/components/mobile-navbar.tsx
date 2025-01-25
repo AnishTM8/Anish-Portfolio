@@ -16,6 +16,8 @@ const MobileNavbar = () => {
 
     return (
         <div className="fixed sm:hidden text-2xl font-semibold flex flex-col-2 z-50 ">
+            {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
+
             <div className="fixed flex flex-col-2 m-4 bottom-0 right-0 ">
                 {/* menu icon */}
                 <button onClick={toggleMenu} className={`${isOpen ? 'hidden' : 'block'} bg-emerald-600 rounded-xl p-1`}>
@@ -36,10 +38,10 @@ const MobileNavbar = () => {
                 {/* To check if the nav bar is open*/}
                 {isOpen && (
                     <motion.div
-                    initial={{ scale: 0, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0, opacity: 0 }}
-                    transition={{ duration: 0.5, type: 'spring' }}
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        exit={{ scale: 0, opacity: 0 }}
+                        transition={{ duration: 0.5, type: 'spring' }}
                         className="border-2 border-emerald-600 bg-black/30 backdrop-blur-3xl w-fit h-fit px-8 py-6 rounded-2xl fixed bottom-[3.5rem] right-0 m-4 origin-bottom-right"
                     >
                         <ul className="hover:text-emerald-500">

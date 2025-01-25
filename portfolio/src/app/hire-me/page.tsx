@@ -54,6 +54,7 @@ const HireMe = () => {
     };
 
     return (
+
         <div className='container mx-auto grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-16'>
             <div className="md:mt-10 flex flex-col lg:flex-row bg-slate-600 p-10 bg-opacity-25 rounded-3xl self-start">
                 <form ref={form} className="grid grid-cols-1 gap-5 mx-auto text-white">
@@ -97,6 +98,7 @@ const HireMe = () => {
             </div>
 
             <div className="md:mt-10 flex flex-col lg:flex-row  bg-slate-500 bg-opacity-25 p-10 rounded-3xl self-start">
+                {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
                 <div className="grid grid-cols-1 gap-5 mx-auto">
                     <h1 className="text-4xl text-emerald-400">
                         Let&apos;s Connect
