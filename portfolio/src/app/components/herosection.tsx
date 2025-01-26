@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import {ReactTyped} from 'react-typed';
+import { ReactTyped } from 'react-typed';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -41,7 +41,7 @@ const HeroSection = () => {
                                 </span>
                             </button>
                         </Link>
-                        
+
                         <a href="/assets/downloads/AnishThapaMagar-Resume.pdf" download="AnishThapaMagar-Resume.pdf">
                             <button className='p-1 w-full mt-2 sm:w-fit sm:px-1 text-3xl sm:text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
                                 <span className='p-3 block sm:px-5 rounded-full bg-black hover:bg-slate-200 hover:text-black'>
@@ -79,6 +79,21 @@ const HeroSection = () => {
                         <Image src='/images/Me.jpg' alt='My Image' width={500} height={500} className='rounded-full' />
                     </div>
                 </div>
+            </div>
+
+            <div className='mt-5 sm:mt-10 px-8 sm:px-10 '>
+                <motion.div className='text-3xl sm:p-8'
+                    initial={{ color: '#ffffff' }}
+                    animate={{ color: ['#059669', '#ffffff', '#16A34A' ]}}
+                    transition={{ duration: 2, repeat: Infinity }}>
+                    Welcome to my Portfolio!
+                    This my attempt in visualizing my skills and experiences.
+                    Feel free to explore around and don&apos;t hesitate to contact me if you have any queries/suggestions.
+                    <br />
+                </motion.div>
+                    <p className='italic text-lg font-bold mt-4 sm:text-right'>
+                        * Developed by: Anish Thapa Magar *
+                    </p>
             </div>
         </section>
     );
