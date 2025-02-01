@@ -87,7 +87,7 @@ const HeroSection = () => {
                     animate={{ color: ['#059669', '#ffffff', '#16A34A' ]}}
                     transition={{ duration: 2, repeat: Infinity }}>
                     Welcome to my Portfolio!
-                    This my attempt in visualizing my skills and experiences.
+                    This is my attempt in visualizing my skills and experiences.
                     Feel free to explore around and don&apos;t hesitate to contact me if you have any queries/suggestions.
                     <br />
                 </motion.div>
