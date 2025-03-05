@@ -18,8 +18,7 @@ const Navbar = () => {
 
     return (
         <nav className="max-sm:hidden pb-5 rounded-xl backdrop-blur-3xl flex justify-end fixed top-0 right-0 z-50">
-            {/* <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--> */}
-            
+
             <ul className="pt-5 pr-7 pl-7 hover:scale-110">
                 <Link href="/" onClick={() => setHeader('Home')}>
                     <svg className="w-9 h-9 fill-current hover:text-emerald-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
