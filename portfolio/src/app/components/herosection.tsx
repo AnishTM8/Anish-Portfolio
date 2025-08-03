@@ -41,8 +41,8 @@ const HeroSection = () => {
                                 </span>
                             </button>
                         </Link>
-                        
-                        <a href="/assets/downloads/AnishThapaMagar-Resume.pdf" download="Thapa Magar, Anish - Resume.pdf">
+
+                        <a href="/assets/downloads/Thapa Magar, Anish - Resume.pdf" download="Thapa Magar, Anish - Resume.pdf">
                             <button className='p-1 w-full mt-2 sm:w-fit sm:px-1 text-3xl sm:text-2xl rounded-full text-white bg-gradient-to-br from-teal-500 via-emerald-500 to-green-500'>
                                 <span className='p-3 block sm:px-5 rounded-full bg-black hover:bg-slate-200 hover:text-black'>
                                     Get Resume
